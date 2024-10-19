@@ -1,0 +1,81 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="./assets/css/tables.css">
+</head>
+<body class="bg-gray-900">
+    <div class="flex h-screen relative">
+        <!-- Sidebar -->
+        <div id="sidebar" class="w-1/2 md:w-1/4 lg:w-1/5 bg-gray-800 border-r border-gray-300 p-4 fixed hidden md:relative z-20 h-full md:flex flex-col lg:block">
+            <div class="mb-8">
+                <h1 class="text-2xl font-extrabold text-blue-600">Weather App</h1>
+            </div>
+            <div class="mb-4">
+                <a href="./index.html"><button class="w-full py-2 px-4 bg-blue-200 hover:bg-blue-300 text-left text-blue-800 font-semibold rounded-lg">Dashboard</button></a>
+            </div>
+            <div>
+                <a href="./tables.html"><button class="w-full py-2 px-4 bg-blue-200 hover:bg-blue-300 text-left text-blue-800 font-semibold rounded-lg">Tables</button></a>
+            </div>
+            <div class="mt-auto flex items-center space-x-2 lg:hidden fixed bottom-4 left-4 md:relative md:bottom-0 md:left-0">
+                <div class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center">
+                    <span><img class="rounded-full" src="./assets/images/logo/logo.jpg" alt="Profile Picture"></span>
+                </div>
+                <span class="md:block lg:hidden text-white">Account</span>
+            </div>
+        </div>
+        <div id="sidebar-overlay" class="sidebar-overlay fixed inset-0 bg-white bg-opacity-50 z-10"></div>
+        
+        <!-- Main Content -->
+        <div class="flex-1 p-4 md:ml-[25%] lg:ml-[20%] overflow-y-auto">
+            <div class="flex justify-between items-center mb-4">
+                <button id="hamburger" class="md:hidden">
+                    <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+                <input id="search-bar" type="text" placeholder="City Name" class="w-3/4 py-2 px-4 bg-blue-200 hover:bg-blue-300 text-blue-500 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-900">
+                <button id="search-button" class="mx-4 bg-blue-500 text-white w-40 py-2 px-4 rounded-lg hover:bg-blue-600">Search</button>
+                <div class="w-12 h-12 rounded-full border border-gray-300 flex items-center justify-center hidden lg:flex">
+                    <span><img class="rounded-full" src="./assets/images/logo/logo.jpg" alt="Profile Picture"></span>
+                </div>
+            </div>
+
+            <!-- Forecast Table -->
+            <div class="bg-blue-200 hover:bg-blue-300 text-blue-500 p-4 rounded-lg mb-4 shadow-md">
+                <table class="min-w-full bg-transparent">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b text-left text-blue-600">Date</th>
+                            <th class="py-2 px-4 border-b text-left text-blue-600">Time</th>
+                            <th class="py-2 px-4 border-b text-left text-blue-600">Temperature</th>
+                            <th class="py-2 px-4 border-b text-left text-blue-600">Weather</th>
+                        </tr>
+                    </thead>
+                    <tbody id="forecast-table">
+                        <!-- Forecast data will be inserted here -->
+                    </tbody>
+                </table>
+                <div class="flex justify-between mt-4">
+                    <button id="prev-page" class="py-2 px-4 bg-blue-500 text-white w-40 py-2 px-4 rounded-lg hover:bg-blue-600">Previous</button>
+                    <button id="next-page" class="py-2 px-4 bg-blue-500 text-white w-40 py-2 px-4 rounded-lg hover:bg-blue-600">Next</button>
+                </div>
+            </div>
+
+            <!-- Chatbot Section -->
+            <div class="bg-blue-200 hover:bg-blue-300 text-blue-500 p-4 rounded-lg shadow-md">
+                <h2 class="text-xl font-bold mb-4 text-blue-600">Chatbot</h2>
+                <div id="chatbot" class="text-black h-48 overflow-y-auto border border-blue-500 p-2 mb-4 rounded-lg">
+                    <!-- Chatbot messages will be inserted here -->
+                </div>
+                <input id="chat-input" type="text" placeholder="Ask a question..." class="w-full py-2 px-4 bg-blue-100 hover:bg-blue-200 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 text-gray-900">
+                <button onclick="sendMessage()" class="my-2 py-2 px-4 bg-blue-500 text-white w-40 py-2 px-4 rounded-lg hover:bg-blue-600">Send</button>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/js/tables.js"></script>
+</body>
+</html>
