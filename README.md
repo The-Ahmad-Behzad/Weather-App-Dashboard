@@ -11,3 +11,5 @@ This project is a weather dashboard using OpenWeatherMap API. It displays curren
 4. To run the project, simply open `index.html` in a browser or use the Live Server extension in VS Code.
    
 The Website uses HTML, CSS, and JavaScript with Tailwind CSS for styling.
+
+## GitHub Pages Link: https://the-ahmad-behzad.github.io/Weather-App-Dashboard/index.html
