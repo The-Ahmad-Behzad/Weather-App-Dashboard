@@ -12,4 +12,5 @@ This project is a weather dashboard using OpenWeatherMap API. It displays curren
    
 The Website uses HTML, CSS, and JavaScript with Tailwind CSS for styling.
 
-## GitHub Pages Link: https://the-ahmad-behzad.github.io/Weather-App-Dashboard/index.html
+## GitHub Pages Link:
+https://the-ahmad-behzad.github.io/Weather-App-Dashboard/index.html
