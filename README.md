@@ -1,5 +1,7 @@
 # Weather App Dashboard
 
+https://socialify.git.ci/The-Ahmad-Behzad/Weather-App-Dashboard/image?language=1&owner=1&name=1&stargazers=1&theme=Light
+
 This project is a weather dashboard using OpenWeatherMap API. It displays current weather data and a 5-day forecast with interactive charts. Users can search by city and switch between Celsius and Fahrenheit units. A chatbot feature is included to answer weather-related queries.
 
 ## Setup Instructions:
